@@ -1,7 +1,8 @@
-# Express + Heroku - Start
+# Easy Start - Express + Heroku
 
 A modify version of the heroku "node-js-getting-started" using [Express 4](http://expressjs.com/).
-(The main change is just the simplification of the project, and some comments that i made along the way)
+
+(The main change is just the simplification of the project, some comments that i made along the way, and the modification of the base "/" route;) )
 
 This application is supported by the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - please check it out.
 
@@ -10,13 +11,21 @@ This application is supported by the [Getting Started on Heroku with Node.js](ht
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
+$ git clone https://github.com/PedroThiagoMaisse/EasyStart-Express-Heroku.git # or clone your own fork
 $ cd node-js-getting-started
 $ npm install
 $ npm start
 ```
 
-Your app should now be running on [localhost:3030](http://localhost:3030/).
+Your app should now be running on [localhost:5000](http://localhost:5000/).
+
+## Re-Running Locally
+
+```
+$ nodemon index.js ; or
+$ npm start ; or
+$ heroku local web
+```
 
 ## Connecting to the right git respository
 
@@ -36,15 +45,13 @@ $ git push heroku main
 $ heroku ps:scale web=1 (this is NEEDED for it to work)
 $ heroku open
 ```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Pushing new code to Heroku
 
 ```
 $ git add .
-$ git commit -m "Add cool face API"
+$ git commit -m "Your Comment Here"
+$ git push -m
 $ git push heroku main
 $ heroku open
 ```

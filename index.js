@@ -3,7 +3,7 @@ const app = express()
 app.use(express.json())
 
 const path = require('path')
-const PORT = process.env.PORT || 3030
+const PORT = process.env.PORT || 5000
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 const cors = require('cors')
