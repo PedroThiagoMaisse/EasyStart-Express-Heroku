@@ -1,8 +1,9 @@
-# node-js-getting-started
+# Express + Heroku - Start
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+A modify version of the heroku "node-js-getting-started" using [Express 4](http://expressjs.com/).
+(The main change is just the simplification of the project, and some comments that i made along the way)
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+This application is supported by the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - please check it out.
 
 ## Running Locally
 
@@ -15,18 +16,38 @@ $ npm install
 $ npm start
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+Your app should now be running on [localhost:3030](http://localhost:3030/).
+
+## Connecting to the right git respository
+
+```sh
+git remote set-url origin https://github.com/PedroThiagoMaisse/aiuysgligyasl.git
+git branch -M main
+git push -u origin main
+```
+
+Your app should now be connected and pushed to your own git repository
 
 ## Deploying to Heroku
 
 ```
-$ heroku create
+$ heroku create (the name of the app)
 $ git push heroku main
+$ heroku ps:scale web=1 (this is NEEDED for it to work)
 $ heroku open
 ```
 or
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Pushing new code to Heroku
+
+```
+$ git add .
+$ git commit -m "Add cool face API"
+$ git push heroku main
+$ heroku open
+```
 
 ## Documentation
 
